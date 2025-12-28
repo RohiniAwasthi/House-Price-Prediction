@@ -15,5 +15,13 @@ final_X = X
 scaler = StandardScaler()
 scaled_X = scaler.fit_transform(final_X)
 st.sidebar.title('Select House features: ')
+st.sidebar.image('https://www.colliers.com/-/media/images/colliers/asia/india/research-images/2022/1536credai_report.ashx?bid=50d992ccd1a64326a40e1e944a4610ec')
+all_value = []
+for i in final_X:
+  result = st.sidebar.slider(f'Select {i} value')
+  all_value.append(result)
+
+st.write(all_value)
+
 
 
